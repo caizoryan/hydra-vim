@@ -128,6 +128,7 @@ export default class Editor extends EventEmitter {
     var self = this
 
     Vim.defineEx('write', 'w', function() {
+      console.log("ss fuck")
       emit('editor: eval all')
     });
 
@@ -140,10 +141,10 @@ export default class Editor extends EventEmitter {
         autocompletion(),
         jsDocCompletions,
         placeholder('//\n// Type some code on a new line (such as "osc().out()"), and press CTRL+shift+enter'),
-        // flashCode((code, shouldUpdateURL = false) => {
-        //   emit('repl: eval', code)
-        //   if (shouldUpdateURL) emit('gallery: save to URL', code)
-        // }),
+        flashCode((code, shouldUpdateURL = false) => {
+          emit('repl: eval', code)
+          if (shouldUpdateURL) emit('gallery: save to URL', code)
+        }),
         flashTheme,
         keymap.of(hydraKeymaps(emit))
       ],
