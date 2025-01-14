@@ -61,6 +61,44 @@ const tagOptions = [
   "diff",
   "mask",
 
+  "modulateRepeat",
+  "modulateRepeatX",
+  "modulateRepeatY",
+  "modulateKaleid",
+  "modulateScrollX",
+  "modulateScrollY",
+  "modulate",
+  "modulateScale",
+  "modulatePixelate",
+  "modulateRotate",
+  "modulateHue",
+
+  "render",
+  "update",
+  "setResolution",
+  "hush",
+  "setFunction",
+  "speed",
+  "bpm",
+  "width",
+  "height",
+  "time",
+  "mouse",
+
+  "fast",
+  "smooth",
+  "ease",
+  "offset",
+  "fit",
+
+  "fft",
+  "setSmooth",
+  "setCutoff",
+  "setBins",
+  "setScale",
+  "hide",
+  "show",
+
 ].map(tag => ({ label: tag + "()", type: "keyword" }))
 
 function completeJSDoc(context) {
